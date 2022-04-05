@@ -1,0 +1,75 @@
+$bg-menu: #E9EEF6;
+$bg-title: #E2EAF5;
+$color-text: #2C3B57;
+$bg-border: #E9EDF2;
+$color: #EFFBFE;
+
+
+$red: #F85251;
+$blue: #1665D8;
+$yellow: #F5C057;
+$violet: #6F48E2;
+$orange: #F09444;
+$green: #5FC354;
+$dark-blue: #172B4D;
+
+.menu {
+  width: 290px;
+  height: 100vh;
+  background-color: $bg-menu;
+  border-right: 1px solid $bg-border;
+  padding: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+    background-color: $bg-title;
+    font-size: 25px;
+    padding: 20px 0 30px 15px;
+  }
+  
+  &__item {
+    display: flex;
+    padding: 20px 15px;
+    margin: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &-name {
+      font-size: 18px;
+      font-weight: 400;
+      display: flex;
+      line-height: 1.4em;
+    }
+
+    &-count {
+      font-size: 15px;
+      background-color: $dark-blue;
+      color: $color;
+      padding: 4px 5px;
+      border-radius: 12px;
+    }
+  }
+
+  &__item:hover {
+    background-color: #d7dce2;
+    transition: .2  s all ease-in-out;
+  }
+
+  &__delete-category{
+    margin-right: 5px;
+    color: #E9EEF6;
+  }
+
+  &__add {
+    text-align: end;
+    padding: 0px 15px;
+  }
+
+  &__create-categories {
+    display: none;
+  }
+
+}

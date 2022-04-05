@@ -1,0 +1,108 @@
+$bg-main: #F5F7F9;
+$bg-title: #E2EAF5;
+$color-search: #A0AABD;
+$bg-border: #E9EDF2;
+$color-text: #2C3B57; 
+
+.main {
+  &__container {
+    padding: 20px 25px;
+    height: 100vh;
+    overflow: hidden;
+    width: calc(100vw - 250px);
+    background-color: $bg-main;
+  }
+
+  &__search {
+    display: flex;
+
+    &-icon {
+      color:$color-search;
+    }
+
+    &-line {
+      color: $color-search;
+      border: none;
+      outline:none;
+      background-color: $bg-main;
+      margin-left: 10px;
+      font-size: 15px;
+    }
+
+    &-line::placeholder {
+      color: $color-search;
+      font-size: 15px;
+    }
+  }
+
+  &__cards {
+    margin-top: 46px;
+    overflow: scroll;
+    height: 100vh;
+    display: grid;
+     grid-template-columns: auto auto auto;  // для панелек
+    grid-template-rows: 258px 258px 258px;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 0 15px 0 0px;
+  }
+
+  &__cards::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f9f9fd;
+  }
+  
+  &__cards::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $bg-title;
+  }
+  
+  &__cards::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #F5F7F9;
+    box-shadow: inset 0 0 6px #F5F7F9;
+    border-radius: 10px;
+    background-color: #F5F7F9;
+  }
+
+  &__card {
+    width: auto;
+    height: 258px;
+    padding: 10px;
+    border: 1px solid $bg-border;
+    box-shadow: 3px 0px 10px $bg-border;
+    padding: 23px 20px 20px 20px;
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__add-card {
+    cursor: pointer;
+  }
+
+  &__category {
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 6px 10px;
+    width: fit-content;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 1.8em;
+  }
+
+  &__settings {
+    text-align: end;
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  &__create-tasks {
+    cursor: pointer;
+    display: none;
+  }
+
+}
